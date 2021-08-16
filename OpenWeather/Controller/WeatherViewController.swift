@@ -31,6 +31,12 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
         
     }
     
+    @IBAction func infoBarItem(_ sender: Any) {
+        
+        basicAlert(title: "Current Weather Info", message: "Press cloud button to open tab where you can enter the city name and get current weather")
+    }
+    
+    
     //MARK: - CLLocationManager
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]

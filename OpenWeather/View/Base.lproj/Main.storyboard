@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TSB-3b-b1G">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -13,7 +13,62 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Weather View Controller-->
+        <!--Appearance View Controller-->
+        <scene sceneID="dfd-7l-tiR">
+            <objects>
+                <viewController id="qMi-jJ-Qmf" customClass="AppearanceViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aaG-h1-hsl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-gY-yOx">
+                                <rect key="frame" x="72" y="326" width="270" height="244"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode Is On" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvP-2J-XkL">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="Vn1-GV-r80"/>
+                                            <constraint firstAttribute="height" constant="150" id="g6y-Cj-s23"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
+                                        <color key="textColor" red="0.0729143545" green="0.08284076303" blue="0.48696428539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKG-Vl-oIs">
+                                        <rect key="frame" x="0.0" y="173" width="270" height="71"/>
+                                        <color key="backgroundColor" red="0.66460851300000001" green="0.0" blue="0.016269624310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="KQx-UH-aRC"/>
+                                            <constraint firstAttribute="height" constant="71" id="tsa-Fg-nCX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                        <state key="normal" title="OPEN SETTINGS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openSettingsTapped:" destination="qMi-jJ-Qmf" eventType="touchUpInside" id="Las-Au-Zh7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pvw-w3-ai0"/>
+                        <color key="backgroundColor" red="0.7674253310062964" green="0.84734861381112703" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LhU-gY-yOx" firstAttribute="centerX" secondItem="aaG-h1-hsl" secondAttribute="centerX" id="HDt-WJ-FAX"/>
+                            <constraint firstItem="LhU-gY-yOx" firstAttribute="centerY" secondItem="aaG-h1-hsl" secondAttribute="centerY" id="c1k-WS-cnD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="85a-wn-ntE"/>
+                    <connections>
+                        <outlet property="appearanceTextLabel" destination="uvP-2J-XkL" id="DJ1-iH-Y5f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEg-fn-QQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.97101449275374" y="-589.28571428571422"/>
+        </scene>
+        <!--Current  Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,18 +77,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Night" translatesAutoresizingMaskIntoConstraints="NO" id="9o9-O6-BO0">
-                                <rect key="frame" x="0.0" y="-15" width="414" height="911"/>
+                                <rect key="frame" x="0.0" y="29" width="414" height="867"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSx-HO-5Hd">
-                                <rect key="frame" x="317" y="56" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cloudRefresh"/>
-                                <connections>
-                                    <segue destination="Sty-qJ-PqG" kind="presentation" identifier="city" id="FNO-8n-IDa"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_rain" translatesAutoresizingMaskIntoConstraints="NO" id="PMf-Br-dqW">
-                                <rect key="frame" x="147" y="247" width="120" height="120"/>
+                                <rect key="frame" x="147" y="269" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="jvy-cZ-C0G"/>
                                     <constraint firstAttribute="height" constant="120" id="yqm-Mz-MIu"/>
@@ -64,6 +111,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSx-HO-5Hd">
+                                <rect key="frame" x="344" y="118" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cloudRefresh"/>
+                                <connections>
+                                    <segue destination="Sty-qJ-PqG" kind="presentation" identifier="city" id="FNO-8n-IDa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,6 +133,20 @@
                             <constraint firstItem="9o9-O6-BO0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ovw-Zh-3So"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Current  Weather" id="ihM-Kn-giI">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle.fill" catalog="system" id="aep-5j-Cl8">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="infoBarItem:" destination="BYZ-38-t0r" id="TcK-ya-cAR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="circle.lefthalf.fill" catalog="system" id="xu0-Qj-a7k">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="qMi-jJ-Qmf" kind="show" id="lbx-AD-Dcw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cityLabel" destination="zcX-cN-6Sc" id="B8V-pl-v58"/>
                         <outlet property="tempLabel" destination="64Z-PC-5lk" id="lJV-W4-7Qb"/>
@@ -86,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="64.955357142857139"/>
+            <point key="canvasLocation" x="758" y="65"/>
         </scene>
         <!--Change City View Controller-->
         <scene sceneID="m4M-2U-gOF">
@@ -131,7 +200,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcR-mZ-lHR" customClass="DesignButton" customModule="OpenWeather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="234" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="backgroundColor" red="0.66460851300000001" green="0.0" blue="0.016269624310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="RvF-95-DN5"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="234" id="Xwk-31-Br1"/>
@@ -157,6 +226,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk0-yr-MBe">
+                                <rect key="frame" x="350" y="20" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25776410100000002" green="0.08487630635" blue="0.086543254550000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cOC-bw-CBz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,7 +258,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jds-HL-ys1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724.63768115942037" y="64.955357142857139"/>
+            <point key="canvasLocation" x="1465" y="65"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1ar-mm-A39">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSB-3b-b1G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Rf-s0-Zal">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c6F-5m-NLy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hn2-N1-g5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="64.955357142857139"/>
         </scene>
     </scenes>
     <designables>
@@ -183,20 +293,19 @@
             <size key="intrinsicContentSize" width="198.5" height="34"/>
         </designable>
         <designable name="vcR-mZ-lHR">
-            <size key="intrinsicContentSize" width="153" height="37"/>
+            <size key="intrinsicContentSize" width="139" height="36"/>
         </designable>
     </designables>
     <resources>
         <image name="Night" width="664" height="1436"/>
+        <image name="circle.lefthalf.fill" catalog="system" width="128" height="121"/>
         <image name="cloudRefresh" width="88" height="83"/>
         <image name="day" width="658" height="1432"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="light_rain" width="128" height="128"/>
         <image name="network" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

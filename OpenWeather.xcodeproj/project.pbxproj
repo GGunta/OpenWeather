@@ -17,6 +17,8 @@
 		8D1B230326C6DD2900477CE1 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B230226C6DD2900477CE1 /* DesignableTextField.swift */; };
 		8D1B230526C6DD6600477CE1 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B230426C6DD6600477CE1 /* BounceButton.swift */; };
 		8D1B230726C6DDAE00477CE1 /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B230626C6DDAE00477CE1 /* DesignButton.swift */; };
+		8D1E87C026CA66B300B3ADCC /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E87BF26CA66B300B3ADCC /* AppearanceViewController.swift */; };
+		8D1E87C326CA6C6800B3ADCC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E87C226CA6C6800B3ADCC /* Alert.swift */; };
 		8D2BE60726C82F2C002BBE85 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D2BE60626C82F2C002BBE85 /* Montserrat-SemiBold.ttf */; };
 		8D2BE60926C8393E002BBE85 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2BE60826C8393E002BBE85 /* ChangeCityViewController.swift */; };
 		8D2BE60C26C83B32002BBE85 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2BE60B26C83B32002BBE85 /* Alamofire */; };
@@ -36,6 +38,8 @@
 		8D1B230226C6DD2900477CE1 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		8D1B230426C6DD6600477CE1 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		8D1B230626C6DDAE00477CE1 /* DesignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
+		8D1E87BF26CA66B300B3ADCC /* AppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
+		8D1E87C226CA6C6800B3ADCC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8D2BE60626C82F2C002BBE85 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		8D2BE60826C8393E002BBE85 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,7 @@
 		8D1B22E626C6D9AA00477CE1 /* OpenWeather */ = {
 			isa = PBXGroup;
 			children = (
+				8D1E87C126CA6C5700B3ADCC /* Extension */,
 				8D1B22FB26C6D9BB00477CE1 /* AppDelegate */,
 				8D1B22FE26C6D9E200477CE1 /* ExtraResource */,
 				8D1B22FF26C6D9F100477CE1 /* Model */,
@@ -97,6 +102,7 @@
 			children = (
 				8D1B22EB26C6D9AA00477CE1 /* WeatherViewController.swift */,
 				8D2BE60826C8393E002BBE85 /* ChangeCityViewController.swift */,
+				8D1E87BF26CA66B300B3ADCC /* AppearanceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -127,6 +133,14 @@
 				8D1B230026C6DB1100477CE1 /* WeatherDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8D1E87C126CA6C5700B3ADCC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D1E87C226CA6C6800B3ADCC /* Alert.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,11 +224,13 @@
 			files = (
 				8D1B230126C6DB1100477CE1 /* WeatherDataModel.swift in Sources */,
 				8D1B22EC26C6D9AA00477CE1 /* WeatherViewController.swift in Sources */,
+				8D1E87C026CA66B300B3ADCC /* AppearanceViewController.swift in Sources */,
 				8D1B230326C6DD2900477CE1 /* DesignableTextField.swift in Sources */,
 				8D1B22E826C6D9AA00477CE1 /* AppDelegate.swift in Sources */,
 				8D1B230726C6DDAE00477CE1 /* DesignButton.swift in Sources */,
 				8D1B22EA26C6D9AA00477CE1 /* SceneDelegate.swift in Sources */,
 				8D1B230526C6DD6600477CE1 /* BounceButton.swift in Sources */,
+				8D1E87C326CA6C6800B3ADCC /* Alert.swift in Sources */,
 				8D2BE60926C8393E002BBE85 /* ChangeCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
